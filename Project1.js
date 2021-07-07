@@ -2,19 +2,31 @@
 function setup() {
   createCanvas(400,400);
 
-  btn_red = createButton("RED");
+  var btn_red = createButton("RED");
   btn_red.position(100,50);
   btn_red.mousePressed(red_bg);
   
 
-  btn_green = createButton("GREEN");
+  var btn_green = createButton("GREEN");
   btn_green.position(250,50);
   btn_green.mousePressed(green_bg);
 }
 
+if (mousePressed(btn_red)){
+  background("Red")
+}
+
+if (mousePressed(btn_green)){
+  background("Green")
+}
+
+
 function draw() {
  background(30);
+
+ drawSprites();
 }
+
 
 function red_bg(){
   r = 255;
@@ -26,6 +38,8 @@ function green_bg(){
   g = 255;
   b = 0;
 }
+
+
 
 
 
